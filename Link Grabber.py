@@ -51,7 +51,7 @@ output = (
     '\n' + '-' * len(links[1]) + '-' * (len(str(len(links))) -1) + '\n'
 ).join([f"Track #{c[0]}: {c[2]}\nLength: {c[1]}   |   By: {c[3]}\n{l}" for c, l in zip(contents, links)])
 
-with open('Link Grabber - Links.txt', 'w') as grabber_file:
+with open('Link Grabber - Links.txt', 'w', encoding='utf-8') as grabber_file:
     grabber_file.write('Found Links Are:\n' + '-' * 16 + '\n')
     grabber_file.write(output)
     # print("Found Links Are:\n\n" + output)
